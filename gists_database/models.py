@@ -1,5 +1,9 @@
 class Gist(object):
     def __init__(self, gist):
+        
+        if type(gist) != tuple:
+            raise KeyError()
+        
         self.id = gist[0]
         self.github_id = gist[1]
         self.html_url = gist[2]
